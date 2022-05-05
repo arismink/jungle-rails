@@ -8,12 +8,19 @@
   <% end%>
   <div>
   
-    <span class="soldout">Sold Out</span>
+    <% if product.quantity == 0 %>
+      <span class="soldout">Sold Out</span>
 
-    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' ,
+
+    <% end %>
+
+    <%# disable button if quantity == 0 %>
+    <%= button_to add_item_cart_path(product_id: product.id), class: 'btn' , :disabled => product.quantity == 0, 
     method: :post do %>
+
       <%= fa_icon "shopping-cart", text: 'Add' %> 
     <% end %>
+
   </div>
 </article>
  
