@@ -1,6 +1,8 @@
 class Admin::ProductsController < ApplicationController
 
-  http_basic_authenticate_with name: ENV["HTTP_BASIC_USER"], password: ENV["HTTP_BASIC_PASSWORD"]
+  # error when trying to authenticate through env. no error if user/pass is hardcoded
+  http_basic_authenticate_with name: ENV["HTTP_BASIC_AUTH_USER"], password: ENV["HTTP_BASIC_AUTH_PASSWORD"]
+
 
   def index
     @products = Product.order(id: :desc).all
