@@ -4,4 +4,12 @@ class Admin::DashboardController < ApplicationController
 
   def show
   end
+
+  def count_products
+    # display how many products are in database
+  end
+
+  def count_categories
+    # display how many categories are in database
+  end
 end
