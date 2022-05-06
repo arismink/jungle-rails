@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
 
-  get '/about', to: 'about#index'
+
+  # these routes are for showing users a login form, logging them in, and logging them out.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
 
   root to: 'products#index'
+
+  resources :about
+
+  # resources :signup do
+  #   post :add_users
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]

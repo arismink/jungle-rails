@@ -3,6 +3,7 @@
     <h3>Welcome to</h3>
     <h1>The Jungle</h1>
     <h2>Where you can find any plants!</h2>
+
   </section>
 </header>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-nav">
@@ -58,6 +59,40 @@
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
             <li><%= link_to 'Categories', [:admin, :categories], class: "nav-link" %> </li>
           </ul>
+        </li>
+
+        <li class="navbar-text">
+          <% if current_user %>
+            Signed in as 
+        </li>
+
+        <li class="nav-item dropdown">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle text-danger"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              <%= current_user.first_name %>
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li class="nav-item">     
+                <%= link_to "Logout", '/logout', class: "nav-link" %>
+              </li>
+            </ul>
+          </li>
+
+          <% else %>
+        <li class="nav-item">
+            <%= link_to 'Login', '/login', class: "nav-link" %> 
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Signup', '/signup', class: "nav-link" %>
+          <% end %>
+
         </li>
         <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
