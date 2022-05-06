@@ -1,5 +1,8 @@
 class OrdersController < ApplicationController
 
+  # require users to login before creating an order
+  before_filter :authorize
+
   def show
     @order = Order.find(params[:id])
   end
