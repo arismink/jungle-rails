@@ -3,6 +3,7 @@
     <h3>Welcome to</h3>
     <h1>The Jungle</h1>
     <h2>Where you can find any plants!</h2>
+
   </section>
 </header>
 <nav class="navbar navbar-expand-lg navbar-dark sticky-nav">
@@ -60,9 +61,9 @@
           </ul>
         </li>
         <li class="nav-item">
+          <% if @current_user %>
+            Signed in as <%= @current_user.first_name %> | <%= link_to "Logout", '/logout', class: "nav-link" %>
 
-          <% if current_user %>
-            Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout', class: "nav-link" %>
         </li>
         <li class="nav-item">
           <% else %>
