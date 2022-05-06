@@ -13,9 +13,6 @@ Rails.application.routes.draw do
 
   resources :about
 
-  # resources :signup do
-  #   post :add_users
-
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
