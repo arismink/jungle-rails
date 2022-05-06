@@ -1,11 +1,30 @@
 <!-- app/views/sessions/new.html.erb -->
+<!-- login page-->
 
-<h1>Login</h1>
+<section class="user-login">
+  <header class="page-header">
+    <h1>Login</h1>
+  </header>
 
-<%= form_tag '/login' do %>
+  <form style="width: 25rem">
+    <%= form_tag '/login', class: "form-class" do %>
+    
+    <div class="mb-3">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <%= text_field_tag :email, "", class: "form-control" %>
+    
+    </div>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+    <div class="mb-3">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <%= password_field_tag :password, "", class: "form-control" %>
+    </div>
+    
+    <div class="mb-3">
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 
-<% end %>
+</section>
+
+
