@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
+  
+  get '/about' => 'about#index'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
   root to: 'products#index'
-
-  resources :about
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
