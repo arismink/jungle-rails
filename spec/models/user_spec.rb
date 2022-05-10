@@ -19,20 +19,25 @@ RSpec.describe User, type: :model do
     end
 
     it 'validates that email is unique' do
-      @user1 = User.new(first_name: 'Sassy', last_name: 'Sally', email: 'test@a.ca', password: 'test', password_confirmation: 'test' )
+      @user1 = User.new(first_name: 'Sassy', last_name: 'Sally', email: 'TEST@A.ca', password: 'test', password_confirmation: 'test' )
       @user1.save
 
       @user2 = User.new(first_name: 'Bumbling', last_name: 'Bob', email: 'test@a.ca', password: 'test', password_confirmation: 'test' )
       @user2.save
-
+      
       expect(@user2.errors.full_messages).to include("Email has already been taken")
 
     end
 
     it 'validates that first_name, last_name and email are present' do
-      @user = User.new(first_name: nil, last_name: 'Sally', email: 'test@a.ca', password: 'test', password_confirmation: 'test' )
+      @user = User.new(first_name: nil, last_name: nil, email: nil, password: 'test', password_confirmation: 'test' )
+      @user.save
 
-      puts @user.errors.full_messages
+      expect(@user.errors.full_messages).to include("First name can't be blank")
+
+      expect(@user.errors.full_messages).to include("Last name can't be blank")
+
+      expect(@user.errors.full_messages).to include("Email can't be blank")
 
     end
 
