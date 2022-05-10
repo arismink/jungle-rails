@@ -24,7 +24,7 @@ RSpec.describe User, type: :model do
 
       @user2 = User.new(first_name: 'Bumbling', last_name: 'Bob', email: 'test@a.ca', password: 'test', password_confirmation: 'test' )
       @user2.save
-      
+
       expect(@user2.errors.full_messages).to include("Email has already been taken")
 
     end
@@ -42,12 +42,12 @@ RSpec.describe User, type: :model do
     end
 
     it 'validates that password created has a minimum character length' do
+      @user = User.new(first_name: nil, last_name: nil, email: 'test@a.ca', password: 'te', password_confirmation: 'te' )
+      @user.save
     
-    # password created must have minimum length
-    # you will need to add this to the model
+      expect(@user.errors.full_messages).to include("Password is too short (minimum is 4 characters)")
 
     end
-
 
 
   end
