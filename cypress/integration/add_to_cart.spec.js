@@ -18,6 +18,4 @@ describe('Add to Cart testing', () => {
 
   });
 
-
-
 })
