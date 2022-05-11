@@ -73,6 +73,26 @@ RSpec.describe User, type: :model do
 
     end
 
+    it 'should successfully fetch the by email regardless of whitespace' do
+      @user = User.new(first_name: 'Sassy', last_name: 'Sally', email: 'test@x.ca', password: 'test', password_confirmation: 'test' )
+      @user.save
+
+      result = User.authenticate_with_credentials('  test@x.ca  ', 'test')
+
+      expect(result).to be_a_kind_of User
+
+    end
+
+    it 'should successfully fetch the by email regardless of case' do
+      @user = User.new(first_name: 'Sassy', last_name: 'Sally', email: 'test@x.ca', password: 'test', password_confirmation: 'test' )
+      @user.save
+
+      result = User.authenticate_with_credentials('TEST@x.ca', 'test')
+
+      expect(result).to be_a_kind_of User
+
+    end
+
   end
 
 end
