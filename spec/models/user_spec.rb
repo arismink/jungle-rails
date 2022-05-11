@@ -53,6 +53,15 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
+    it 'calls the authenticate method and returns the correct instance' do
+      @user = User.new(first_name: 'Sassy', last_name: 'Sally', email: 'test@x.ca', password: 'test', password_confirmation: 'test' )
+      @user.save
+
+      result = User.authenticate_with_credentials('test@x.ca', 'test')
+
+      expect(result).to be_a_kind_of User
+
+    end
 
   end
 
