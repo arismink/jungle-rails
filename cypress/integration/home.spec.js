@@ -1,7 +1,10 @@
 describe('Homepage testing', () => {
+  beforeEach(() => {
+    cy.visit('/')
+  });
   
   it("should visit root", () => {
-    cy.visit('/')
+
   }) 
 
   it("There is products on the page", () => {
