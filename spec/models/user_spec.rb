@@ -59,7 +59,7 @@ RSpec.describe User, type: :model do
 
       result = User.authenticate_with_credentials('test@x.ca', 'test')
 
-      expect(result).to be_a_kind_of User
+      expect(result).to eq @user
 
     end
 
@@ -79,7 +79,7 @@ RSpec.describe User, type: :model do
 
       result = User.authenticate_with_credentials('  test@x.ca  ', 'test')
 
-      expect(result).to be_a_kind_of User
+      expect(result).to eq @user
 
     end
 
@@ -89,7 +89,7 @@ RSpec.describe User, type: :model do
 
       result = User.authenticate_with_credentials('TEST@x.ca', 'test')
 
-      expect(result).to be_a_kind_of User
+      expect(result).to eq @user
 
     end
 
