@@ -14,12 +14,12 @@
 
 #### Feature: User Authentication
 
-- [ ] Major: As a Visitor I can go to the registration page from any page in order to create an account
-- [ ] Major: As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
-- [ ] Major: As a Visitor I can sign in using my e-mail and password
-- [ ] Major: As a User I can log out from any page
-- [ ] Major: As a User I cannot sign up with an existing e-mail address (uniqueness validation)
-- [ ] Major: Passwords are not stored as plain text in the database. Instead, `has_secure_password` is used in the User model, leveraging the `bcrypt` gem
+- [x] Major: As a Visitor I can go to the registration page from any page in order to create an account
+- [x] Major: As a Visitor I can sign up for a user account with my e-mail, password, first name and last name
+- [x] Major: As a Visitor I can sign in using my e-mail and password
+- [x] Major: As a User I can log out from any page
+- [x] Major: As a User I cannot sign up with an existing e-mail address (uniqueness validation)
+- [x] Major: Passwords are not stored as plain text in the database. Instead, `has_secure_password` is used in the User model, leveraging the `bcrypt` gem
 
 #### Enhancement: Order Details Page
 
