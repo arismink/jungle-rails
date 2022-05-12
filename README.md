@@ -2,6 +2,8 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+The goal of the project is to learn how to navigate an existing code-base while using existing code style to implement new features in unfamiliar territory.
+
 ## Final Product
 
 ### Add item to cart
