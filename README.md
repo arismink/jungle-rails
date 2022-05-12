@@ -5,19 +5,19 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 ## Final Product
 
 ### Add item to cart
-![add-to-cart](https://github.com/arismink/scheduler/blob/master/docs/scheduler%20-%20add%20appointment.gif)
+![add-to-cart](https://github.com/arismink/jungle-rails/blob/master/public/add-to-cart.gif)
 
 ### Add new category
-![add-category]
+![add-category](https://github.com/arismink/jungle-rails/blob/master/public/add-category.png)
 
 ### Add new product
-![add-product]
+![add-product](https://github.com/arismink/jungle-rails/blob/master/public/add-product.png)
 
 ### Checkout
-![checkout]
+![checkout](https://github.com/arismink/jungle-rails/blob/master/public/checkout.gif)
 
 ### Account signup
-![account-creation]
+![account-creation](https://github.com/arismink/jungle-rails/blob/master/public/account-creation.png)
 
 
 ## Setup
