@@ -23,15 +23,15 @@
 
 #### Enhancement: Order Details Page
 
-- [ ] Major: The order page contains items, their image, name, description, quantities and line item totals
-- [ ] Major: The final amount for the order is displayed
-- [ ] Minor: The email that was used to place the order is displayed
-- [ ] Minor: As a Visitor I can place an order (i.e. without logging in and therefore without an e-mail address). The original functionality from the inherited code (even though it is not realistic) should therefore not be suppressed.
+- [x] Major: The order page contains items, their image, name, description, quantities and line item totals
+- [x] Major: The final amount for the order is displayed
+- [x] Minor: The email that was used to place the order is displayed
+- [x] Minor: As a Visitor I can place an order (i.e. without logging in and therefore without an e-mail address). The original functionality from the inherited code (even though it is not realistic) should therefore not be suppressed.
 
 #### Bug: Missing Admin Security
 
-- [ ] Major: User must enter HTTP auth login/password to access admin functionality
-- [ ] Bonus: Should ideally be implemented in an abstract top-level class for admin controllers (e.g., `Admin::BaseController` which the other concrete admin controllers inherit)
+- [x] Major: User must enter HTTP auth login/password to access admin functionality
+- [x] Bonus: Should ideally be implemented in an abstract top-level class for admin controllers (e.g., `Admin::BaseController` which the other concrete admin controllers inherit)
 
 #### Bug: Checking Out with Empty Cart
 
