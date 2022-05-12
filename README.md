@@ -2,6 +2,24 @@
 
 A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
 
+## Final Product
+
+### Add item to cart
+![add-to-cart](https://github.com/arismink/scheduler/blob/master/docs/scheduler%20-%20add%20appointment.gif)
+
+### Add new category
+![add-category]
+
+### Add new product
+![add-product]
+
+### Checkout
+![checkout]
+
+### Account signup
+![account-creation]
+
+
 ## Setup
 
 1. Run `bundle install` to install dependencies

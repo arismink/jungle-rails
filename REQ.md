@@ -35,11 +35,11 @@
 
 #### Bug: Checking Out with Empty Cart
 
-- [ ] Major: When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
+- [x] Major: When the cart is empty and the user goes to the carts#show page, instead of displaying the contents and a stripe checkout button, display a friendly message about how it is empty and link to the home page
 
 ## Git
 
-- [ ] Minor: The git commit history should have multiple commits and reasonable commit messages. There should be good use of branching and merging for each feature.
+- [x] Minor: The git commit history should have multiple commits and reasonable commit messages. There should be good use of branching and merging for each feature.
 
 ## Stretch Features
 
